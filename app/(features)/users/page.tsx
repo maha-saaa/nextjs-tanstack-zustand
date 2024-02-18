@@ -1,6 +1,6 @@
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import getQueryClient from "@/app/lib/get-query-client";
-import List from "../users-list/users-list";
+import List from "./users-list/users-list";
 
 export default async function HydratedUsers() {
   const queryClient = getQueryClient();

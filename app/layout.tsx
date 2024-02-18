@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./styles/globals.css";
 import { inter } from "./styles/fonts";
 import TanstackQueryClientProvider from "./providers/query-client-provider";
+import { StoreProvider } from "./providers/store-provider";
 
 export const metadata: Metadata = {
   title: "Next App with Zustand and Tanstack",
@@ -16,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <TanstackQueryClientProvider>{children}</TanstackQueryClientProvider>
+        <StoreProvider>
+          <TanstackQueryClientProvider>{children}</TanstackQueryClientProvider>
+        </StoreProvider>
       </body>
     </html>
   );
