@@ -1,4 +1,4 @@
-This is a sample [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) using the app router and demonstrates the integration of TanStack Query and Zustand for state management.
+This is a sample [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) using the app router that demonstrates the integration of TanStack Query and Zustand for state management.
 
 ## Getting Started
 
