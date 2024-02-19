@@ -2,7 +2,7 @@
 
 import { useQuery } from "@tanstack/react-query";
 
-export default function List() {
+export default function List({users} : any) {
   // This useQuery was prefetched on the server
   const { data } = useQuery({
     queryKey: ["users"],
@@ -35,6 +35,13 @@ export default function List() {
       <div className="flex flex-col justify-center items-start pb-4">
         <p className="text-xl">Fetched on the client</p>
         {otherData?.map((user: any) => {
+          return <p key={user.id}>{user.name}</p>;
+        })}
+      </div>
+
+      <div className="flex flex-col justify-center items-start pb-4">
+        <p className="text-xl">Fetched directly on server component</p>
+        {users?.map((user: any) => {
           return <p key={user.id}>{user.name}</p>;
         })}
       </div>
