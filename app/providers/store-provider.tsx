@@ -11,7 +11,7 @@ export interface StoreProviderProps {
 
 export const StoreContext = createContext<StoreApi<BoundedStore> | null>(null);
 
-export const StoreProvider = ({ children }: StoreProviderProps) => {
+export const StoreProviderWrapper = ({ children }: StoreProviderProps) => {
   //   const storeRef = useRef<TStore>();
   const storeRef = useRef<StoreApi<BoundedStore>>();
   if (!storeRef.current) storeRef.current = createBoundStore();
