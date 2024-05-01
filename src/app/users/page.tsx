@@ -1,12 +1,11 @@
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
-import getQueryClient from "@/app/lib/get-query-client";
+import getQueryClient from "@/lib/get-query-client";
 import List from "./users-list/users-list";
 
 export default async function HydratedUsers() {
   const res = await fetch("https://jsonplaceholder.typicode.com/users").then(
     (response) => response.json()
   );
-
 
   const queryClient = getQueryClient();
   await queryClient.prefetchQuery({

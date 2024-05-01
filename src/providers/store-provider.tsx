@@ -2,7 +2,7 @@
 
 import { StoreApi, useStore } from "zustand";
 import { ReactNode, createContext, useContext, useRef } from "react";
-import { type BoundedStore, createBoundStore } from "../store";
+import { type BoundedStore, createBoundStore } from "../stores";
 
 export interface StoreProviderProps {
   children: ReactNode;

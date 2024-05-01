@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from "next";
-import "./styles/globals.css";
-import { inter } from "./styles/fonts";
-import QueryClientProviderWrapper from "./providers/query-client-provider";
-import { StoreProviderWrapper } from "./providers/store-provider";
+import "../styles/globals.css";
+import { inter } from "../styles/fonts";
+import { StoreProviderWrapper } from "@/providers/store-provider";
+import QueryClientProviderWrapper from "@/providers/query-client-provider";
 
 export const metadata: Metadata = {
   title: "Next App with Zustand and Tanstack",
